@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DANG NHAP</title>
+</head>
+<body>
+<h3>Ten dang nhap:</h3>
+<input type="text" id="admin">
+<p id="user" style="color: red"></p>
+<h3>Mat khau:</h3>
+<input type="password" id="pw">
+<p id="pass" style="color: red"></p><br>
+<button onclick="dangnhap()" style="margin-top: 20px">Log In</button>
+</body>
+<script>
+    function dangnhap() {
+        let userName = document.getElementById("admin").value
+        let pass = document.getElementById("pw").value
+        if (userName == 'Admin') {
+            if (pass == 'TheMaster') {
+                alert("Welcome Boss")
+            } else {
+                document.getElementById("pass").innerHTML = "Sai mat khau"
+            }
+        } else if (pass == 'TheMaster') {
+            document.getElementById("user").innerHTML = "Sai ten dang nhap"
+        } else {
+            document.getElementById("user").innerHTML = "Sai ten dang nhap"
+            document.getElementById("pass").innerHTML = "Sai mat khau"
+        }
+    }
+</script>
+</html>

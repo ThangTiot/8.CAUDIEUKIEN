@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NAM NHUAN</title>
+</head>
+<body>
+
+</body>
+<script>
+  let year = prompt("Nhao vao nam muon kiem tra: ");
+  let result;
+  let chia4 = year%4 == 0;
+  let chia100 = year%100 == 0;
+  let chia400 = year%400 == 0;
+  if (chia100) {
+      if (chia400) {
+          result=true;
+      } else {
+          result=false;
+      }
+  } else if (chia4) {
+      result=true;
+  } else {
+      result=false;
+  }
+
+  if (result) {
+      alert(year + " la nam nhuan")
+  } else {
+      alert(year + " khong la nam nhuan")
+  }
+</script>
+</html>
